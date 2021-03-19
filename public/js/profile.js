@@ -1,6 +1,8 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
+  // once comment added it should display down here DO NOT FORGET
+
   const name = document.querySelector('#project-name').value.trim();
   const needed_funding = document.querySelector('#project-funding').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
