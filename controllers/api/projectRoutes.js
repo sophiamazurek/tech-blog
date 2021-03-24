@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
-
+//localhost:3001/api/project
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({

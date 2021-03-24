@@ -48,32 +48,32 @@ document
   .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
 
-  const commentFormHandler = async (event) => {
-    event.preventDefault();
+  // const commentFormHandler = async (event) => {
+  //   event.preventDefault();
   
-    // once comment added it should display down here DO NOT FORGET
+  //   // once comment added it should display down here DO NOT FORGET
   
-    const comment = document.querySelector('#project-comment').value.trim();
-    const user_id = 1;
-    const description = document.querySelector('#project-desc').value.trim();
+  //   const comment = document.querySelector('#project-comment').value.trim();
+  //   const user_id = 1;
+  //   const description = document.querySelector('#project-desc').value.trim();
   
-    if (comment && user_id ) {
-      const response = await fetch(`/api/comment`, {
-        method: 'POST',
-        body: JSON.stringify({ comment, user_id }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  //   if (comment && user_id ) {
+  //     const response = await fetch(`/api/comment`, {
+  //       method: 'POST',
+  //       body: JSON.stringify({ comment, user_id }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
   
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to create comment');
-      }
-    }
-  };
+  //     if (response.ok) {
+  //       document.location.replace('/');
+  //     } else {
+  //       alert('Failed to create comment');
+  //     }
+  //   }
+  // };
 
-  document
-  .querySelector('.comment-form')
-  .addEventListener('click', commentFormHandler);
+  // document
+  // .querySelector('.comment-form')
+  // .addEventListener('click', commentFormHandler);
